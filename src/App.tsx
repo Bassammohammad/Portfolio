@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div
-      className={`mt-20 mb-20 space-y-20 ${isGreenMode ? 'theme-green' : 'theme-default'}`}
+      className={`my-20 w-[60%] m-auto space-y-20 overflow-x-hidden ${isGreenMode ? 'theme-green' : 'theme-default'}`}
     >
       <Theme setIsGreenMode={setIsGreenMode} isGreenMode={isGreenMode} />
       <HeaderSection />

@@ -6,7 +6,6 @@
 body {
   background: black;
   color: #F5F5F5;
-  margin: 0 20% 0 20%;
 }
 
 @layer base {

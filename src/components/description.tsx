@@ -29,12 +29,12 @@ const languagesUsedInPortfolio = ['React', 'TypeScript', 'Tailwind CSS']
 
 export default function Description() {
   return (
-    <div className={`space-y-20`}>
-      <div className="flex flex-col items-start w-4/5 space-y-4  ">
-        <h1 className=" text-4xl font-bold text-primary">
+    <div className="space-y-20 flex flex-col items-center lg:items-start text-center lg:text-start">
+      <div className="flex flex-col items-center lg:items-start w-4/5 space-y-4  ">
+        <h1 className=" text-4xl font-bold text-primary ">
           Pourquoi j'apprend ce métier
         </h1>
-        <p className=" text-secondary">
+        <p className=" text-secondary ">
           Fusionner les mathématiques, la logique, la créativité, le travail
           d’équipe, la concrétisation d’un objet fonctionnel et sa
           représentation visuelle, c'est ce qui m'a permis de me faire une place
@@ -42,16 +42,16 @@ export default function Description() {
         </p>
       </div>
       <div className="space-y-10">
-        <div className="space-y-2">
-          <h1 className="text-4xl font-bold text-primary">
+        <div className="space-y-2 flex flex-col items-center lg:items-start">
+          <h1 className="text-4xl font-bold text-primary ">
             Ce que j'ai appris
           </h1>
-          <p className="text-secondary">
+          <p className="text-secondary ">
             + des tonnes de vidéos sur YouTube et d'articles
           </p>
         </div>
 
-        <div className="flex flex-row items-start justify-between gap-10 ">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 ">
           <ProjectCard
             src="/firstCourse.png"
             alt="first course"
@@ -74,12 +74,12 @@ export default function Description() {
         </div>
       </div>
 
-      <div className="space-y-10">
+      <div className="space-y-10 flex flex-col items-center lg:items-start">
         <h1 className="text-4xl font-bold text-primary">
           {' '}
           Ce que j'ai réalisé
         </h1>
-        <div className="flex flex-row items-center justify-between gap-10 ">
+        <div className="flex  flex-col lg:flex-row lg:items-start items-center justify-between gap-10 ">
           <ProjectCard
             src="/financeProjet.png"
             alt="finance projet"
@@ -103,11 +103,11 @@ export default function Description() {
           />
         </div>
       </div>
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold text-primary">
+      <div className="space-y-4 flex flex-col items-center lg:items-start">
+        <h1 className="text-4xl font-bold text-primary ">
           Ce que j'aimerais réaliser dans ma carrière
         </h1>
-        <p className="text-secondary">
+        <p className="text-secondary ">
           J'aimerais devenir un développeur front-end expert, capable de créer
           des interfaces modernes, performantes et accessibles avec React,
           TypeScript et Next.js. Mon objectif est de concevoir des expériences
