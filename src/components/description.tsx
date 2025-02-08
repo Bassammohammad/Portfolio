@@ -91,8 +91,8 @@ export default function Description() {
             description="Mon site personnel, ce site !"
             className="py-6"
             arrayLanguages={languagesUsedInPortfolio}
-            hrefGithub="https://github.com/Bassammohammad/finance-app"
-            hrefWebsite="https://finance-app-kohl-nu.vercel.app/"
+            hrefGithub="https://github.com/Bassammohammad/Portfolio"
+            hrefWebsite="https://portfolio-rho-umber-73.vercel.app/"
           />
         </div>
       </div>
