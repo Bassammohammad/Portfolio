@@ -31,7 +31,7 @@ export default function ProjectCard({
         <Image src={src} alt={alt} className="rounded-t-3xl w-[420px] h-48 " />
         <div className="space-y-4 mx-4">
           <div className="mt-4 flex items-center">
-            <span className="text-xl ">{title}</span>
+            <span className="text-xl text-primary ">{title}</span>
             <div className="ml-8 flex items-center justify-center gap-x-2">
               <div className="border-white border-2 rounded-full" />
               <Image
@@ -79,15 +79,13 @@ export default function ProjectCard({
               )}
             </div>
           </div>
-          <p className={cn('w-96 text-neutral-400', className)}>
-            {description}
-          </p>
+          <p className={cn('w-96 text-secondary', className)}>{description}</p>
           <div className="flex-row items-center  ">
             {arrayLanguages.map((item, i) => {
               return (
                 <Badge
                   key={i}
-                  className="bg-neutral-800 mx-1 text-neutral-400 hover:text-neutral-50 cursor-default "
+                  className="bg-neutral-800 mx-1 text-secondary hover:text-primary cursor-default "
                 >
                   {item}
                 </Badge>
@@ -98,19 +96,19 @@ export default function ProjectCard({
         <div className="flex items-center justify-center  gap-x-4 mt-8 ">
           {hrefGithub && (
             <a
-              className="inline-flex items-center justify-center gap-2  whitespace-nowrap rounded-2xl border border-white hover:bg-neutral-100 hover:text-neutral-950 h-10 px-6 py-4
+              className="inline-flex text-primary items-center justify-center gap-2  whitespace-nowrap rounded-2xl border border-primary hover:bg-primary hover:text-secondary h-10 px-6 py-4
                 text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none
                  focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
                  disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
               href={hrefGithub}
             >
               <FiGithub />
-              <span>Source</span>
+              <span className="">Source</span>
             </a>
           )}
           {hrefWebsite && (
             <a
-              className="inline-flex items-center justify-center gap-2 text-blue-400 whitespace-nowrap rounded-2xl border border-blue-600 hover:bg-blue-600 hover:text-neutral-50 h-10 px-6 py-4
+              className="inline-flex items-center  justify-center gap-2 text-secondary whitespace-nowrap rounded-2xl border border-secondary hover:bg-secondary hover:text-primary h-10 px-6 py-4
                 text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none
                  focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
                  disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"

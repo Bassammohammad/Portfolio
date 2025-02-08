@@ -8,62 +8,24 @@ body {
   color: #F5F5F5;
   margin: 0 20% 0 20%;
 }
-/*@layer utilities {*/
-/*  @keyframes typing {*/
-/*    0% {*/
-/*      width: 0%;*/
-/*      visibility: hidden;*/
-/*    }*/
-/*    100% {*/
-/*      width: 10ch;*/
-/*    }*/
-/*  }*/
 
-/*  @keyframes blink {*/
-/*    50% {*/
-/*      border-color: transparent;*/
-/*    }*/
-/*    100% {*/
-/*      border-color: white;*/
-/*    }*/
-/*  }*/
+@layer base {
+  :root {
+    --color-primary: rgb(249, 250, 251);
+    --color-secondary: rgb(156, 163, 175);
 
-/*  .animate-typing {*/
-/*    animation: typing 2s steps(10) infinite alternate, blink 0.7s infinite;*/
-/*  }*/
-/*}*/
+  }
+}
 
-/*@layer base {*/
-/*  :root {*/
-/*    --color-neutral-50: theme("colors.neutral-50");*/
-/*    --color-neutral-100: theme("colors.neutral-100");*/
-/*    --color-neutral-200: theme("colors.neutral-200");*/
-/*    --color-neutral-300: theme("colors.neutral-300");*/
-/*    --color-neutral-400: theme("colors.neutral-400");*/
-/*    --color-neutral-500: theme("colors.neutral-500");*/
-/*    --color-neutral-600: theme("colors.neutral-600");*/
-/*    --color-neutral-700: theme("colors.neutral-700");*/
-/*    --color-neutral-800: theme("colors.neutral-800");*/
-/*    --color-neutral-900: theme("colors.neutral-900");*/
-/*  }*/
-/*}*/
 
-/*.theme-white {*/
-/*  --color-white: theme("colors.white");*/
-/*}*/
-
-/*.theme-green {*/
-/*  --color-green-50: theme("colors.green-50");*/
-/*  --color-green-100: theme("colors.green-100");*/
-/*  --color-green-200: theme("colors.green-200");*/
-/*  --color-green-300: theme("colors.green-300");*/
-/*  --color-green-400: theme("colors.green-400");*/
-/*  --color-green-500: theme("colors.green-500");*/
-/*  --color-green-600: theme("colors.green-600");*/
-/*  --color-green-700: theme("colors.green-700");*/
-/*  --color-green-800: theme("colors.green-800");*/
-/*  --color-green-900: theme("colors.green-900");*/
-/*}*/
+.theme-green {
+  --color-primary: rgb(16, 185, 129);
+  --color-secondary: rgb(220, 252, 231)
+}
+.theme-default {
+  --color-primary: rgb(249, 250, 251);
+  --color-secondary: rgb(156, 163, 175)
+}
 
 /*theme-rose {*/
 /*  --color-rose-50: theme("colors.neutral-50");*/
