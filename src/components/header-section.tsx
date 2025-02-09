@@ -22,7 +22,7 @@ export default function HeaderSection() {
           <span className=" text-primary md:w-max drop-shadow-2xl w-min text-7xl">
             Mohammad Bassam,
           </span>
-          <span className="flex w-full items-center justify-center text-center text-2xl text-secondary md:min-h-fit md:justify-start md:text-left md:text-3xl mt-2">
+          <span className="flex w-full items-center justify-center text-center text-2xl text-tertiary md:min-h-fit md:justify-start md:text-left md:text-3xl mt-2">
             <Typewriter
               words={[
                 'Développeur en perpétuelle évolution',

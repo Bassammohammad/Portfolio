@@ -34,7 +34,7 @@ export default function Description() {
         <h1 className=" text-4xl font-bold text-primary ">
           Pourquoi j'apprend ce métier
         </h1>
-        <p className=" text-secondary ">
+        <p className=" text-tertiary ">
           Fusionner les mathématiques, la logique, la créativité, le travail
           d’équipe, la concrétisation d’un objet fonctionnel et sa
           représentation visuelle, c'est ce qui m'a permis de me faire une place
@@ -46,18 +46,17 @@ export default function Description() {
           <h1 className="text-4xl font-bold text-primary ">
             Ce que j'ai appris
           </h1>
-          <p className="text-secondary ">
+          <p className="text-tertiary ">
             + des tonnes de vidéos sur YouTube et d'articles
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 ">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
           <ProjectCard
             src="/firstCourse.png"
             alt="first course"
             title="Full-Stack Web Dev"
             description="La formation complète pour maîtriser les bases du développement web Full Stack. "
-            className="py-6"
             arrayLanguages={languagesLearnedInFirstCourse}
             hrefWebsite="https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=KEEPLEARNING"
           />
@@ -79,7 +78,7 @@ export default function Description() {
           {' '}
           Ce que j'ai réalisé
         </h1>
-        <div className="flex  flex-col lg:flex-row lg:items-start items-center justify-between gap-10 ">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
           <ProjectCard
             src="/financeProjet.png"
             alt="finance projet"
@@ -96,7 +95,6 @@ export default function Description() {
             alt="portfolio projet"
             title="Portfolio"
             description="Mon site personnel, ce site !"
-            className="py-6"
             arrayLanguages={languagesUsedInPortfolio}
             hrefGithub="https://github.com/Bassammohammad/Portfolio"
             hrefWebsite="https://portfolio-rho-umber-73.vercel.app/"
@@ -107,14 +105,14 @@ export default function Description() {
         <h1 className="text-4xl font-bold text-primary ">
           Ce que j'aimerais réaliser dans ma carrière
         </h1>
-        <p className="text-secondary ">
-          J'aimerais devenir un développeur front-end expert, capable de créer
-          des interfaces modernes, performantes et accessibles avec React,
-          TypeScript et Next.js. Mon objectif est de concevoir des expériences
-          utilisateur fluides et optimisées tout en contribuant à des projets
-          innovants et ambitieux. Je souhaite aussi continuer à apprendre et
-          évoluer dans ce domaine, en partageant mes connaissances avec la
-          communauté.
+        <p className="text-tertiary ">
+          Je veux devenir un expert dans mon domaine, capable de créer des
+          expériences uniques et impactantes. Ce qui m’anime, c’est la recherche
+          d’élégance et de fluidité dans tout ce que je fais, en repoussant sans
+          cesse mes limites. J’aime apprendre, explorer de nouvelles idées et
+          contribuer à des projets ambitieux qui ont du sens. Au-delà de la
+          technique, c’est la créativité, l’innovation et le partage qui me
+          motivent au quotidien.
         </p>
       </div>
     </div>

@@ -11,7 +11,8 @@ body {
 @layer base {
   :root {
     --color-primary: rgb(249, 250, 251);
-    --color-secondary: rgb(156, 163, 175);
+    --color-secondary: rgb(82, 82, 82);
+    --color-tertiary: rgb(163, 163, 163);
 
   }
 }
@@ -19,11 +20,15 @@ body {
 
 .theme-green {
   --color-primary: rgb(16, 185, 129);
-  --color-secondary: rgb(220, 252, 231)
+  --color-secondary: rgb(240, 253, 244);
+  --color-tertiary: rgb(240, 253, 244)
+
 }
 .theme-default {
   --color-primary: rgb(249, 250, 251);
-  --color-secondary: rgb(156, 163, 175)
+  --color-secondary: rgb(82, 82, 82);
+  --color-tertiary: rgb(163, 163, 163);
+
 }
 
 /*theme-rose {*/

@@ -12,6 +12,7 @@ export default {
       colors: {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
+        tertiary: 'var(--color-tertiary)',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

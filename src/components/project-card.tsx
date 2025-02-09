@@ -1,18 +1,16 @@
-import { Card, CardContent } from '@/components/ui/card.tsx'
 import Image from '@/components/image.tsx'
 import { Badge } from '@/components/ui/badge.tsx'
 import { FiGithub, FiGlobe } from 'react-icons/fi'
-import { cn } from '@/lib/utils.ts'
+import { Separator } from '@/components/ui/separator.tsx'
 
 type ProjectCardProps = {
   src: string
   alt: string
   title: string
   description: string
-  arrayLanguages: string[]
+  arrayLanguages?: string[]
   hrefGithub?: string
   hrefWebsite?: string
-  className?: string
 }
 
 export default function ProjectCard({
@@ -23,103 +21,79 @@ export default function ProjectCard({
   arrayLanguages,
   hrefWebsite,
   hrefGithub,
-  className,
 }: ProjectCardProps) {
+  const TechIcons = () => {
+    return (
+      <div className="grid grid-cols-6 gap-2">
+        {arrayLanguages?.map((item, i) => (
+          <Image src={`${item}.png`} alt={alt} key={i} className="w-4 h-4" />
+        ))}
+      </div>
+    )
+  }
+  const Tags = () => {
+    return (
+      <div className="">
+        {arrayLanguages?.map((item, i) => (
+          <Badge
+            key={i}
+            className="bg-secondary text-primary hover:bg-primary hover:text-secondary  mr-2 mb-2"
+          >
+            {item}
+          </Badge>
+        ))}
+      </div>
+    )
+  }
+
   return (
-    <Card className="rounded-t-3xl bg-neutral-900">
-      <CardContent className="pb-10">
-        <Image src={src} alt={alt} className="rounded-t-3xl w-[420px] h-48 " />
-        <div className="space-y-4 mx-4">
-          <div className="mt-4 flex items-center">
-            <span className="text-xl text-primary ">{title}</span>
-            <div className="ml-8 flex items-center justify-center gap-x-2">
-              <div className="border-white border-2 rounded-full" />
-              <Image
-                src={`/${arrayLanguages[0]}.png`}
-                alt={arrayLanguages[0]}
-                className="w-4 h-4"
-              />
-              <Image
-                src={`/${arrayLanguages[1]}.png`}
-                alt={arrayLanguages[1]}
-                className="w-4 h-4"
-              />
-              <Image
-                src={`/${arrayLanguages[2]}.png`}
-                alt={arrayLanguages[2]}
-                className="w-4 h-4"
-              />
-              {arrayLanguages[3] && (
-                <Image
-                  src={`/${arrayLanguages[3]}.png`}
-                  alt={arrayLanguages[3]}
-                  className="w-4 h-4"
-                />
-              )}
-              {arrayLanguages[4] && (
-                <Image
-                  src={`/${arrayLanguages[4]}.png`}
-                  alt={arrayLanguages[4]}
-                  className="w-4 h-4"
-                />
-              )}
-              {arrayLanguages[5] && (
-                <Image
-                  src={`/${arrayLanguages[5]}.png`}
-                  alt={arrayLanguages[5]}
-                  className="w-4 h-4"
-                />
-              )}
-              {arrayLanguages[6] && (
-                <Image
-                  src={`/${arrayLanguages[6]}.png`}
-                  alt={arrayLanguages[6]}
-                  className="w-4 h-4"
-                />
-              )}
-            </div>
+    <div className="flex h-full flex-col overflow-hidden rounded-3xl border  shadow-lg border-neutral-900 bg-neutral-950">
+      <div className="h-48 w-full">
+        <Image
+          src={src}
+          width={2700}
+          height={2025}
+          alt={alt}
+          className="h-full w-full object-cover object-top"
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col p-5">
+        <div>
+          <div className="flex items-center gap-x-2">
+            <h1 className="text-primary">{title}</h1>
+            <Separator orientation="vertical" />
+            <TechIcons />
           </div>
-          <p className={cn('w-96 text-secondary', className)}>{description}</p>
-          <div className="flex-row items-center  ">
-            {arrayLanguages.map((item, i) => {
-              return (
-                <Badge
-                  key={i}
-                  className="bg-neutral-800 mx-1 text-secondary hover:text-primary cursor-default "
-                >
-                  {item}
-                </Badge>
-              )
-            })}
-          </div>
+          <p className="text-justify  md:text-left py-4  text-tertiary">
+            {description}
+          </p>
+          <Tags />
         </div>
-        <div className="flex items-center justify-center  gap-x-4 mt-8 ">
-          {hrefGithub && (
+        <div className="mt-9 flex flex-1 items-end justify-center gap-2 data-[variant='full']:gap-6">
+          <>
             <a
-              className="inline-flex text-primary items-center justify-center gap-2  whitespace-nowrap rounded-2xl border border-primary hover:bg-primary hover:text-secondary h-10 px-6 py-4
-                text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none
-                 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
-                 disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
               href={hrefGithub}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 rounded-2xl  px-4 py-2  bg-secondary text-primary hover:bg-primary hover:text-secondary"
             >
-              <FiGithub />
-              <span className="">Source</span>
+              Source <FiGithub />
             </a>
-          )}
-          {hrefWebsite && (
+          </>
+
+          <>
             <a
-              className="inline-flex items-center  justify-center gap-2 text-secondary whitespace-nowrap rounded-2xl border border-secondary hover:bg-secondary hover:text-primary h-10 px-6 py-4
-                text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none
-                 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none
-                 disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
               href={hrefWebsite}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 rounded-2xl  py-2 px-4   bg-blue-600/5 text-blue-600 hover:bg-blue-600 hover:text-neutral-50"
             >
-              <FiGlobe />
-              <span>Website</span>
+              Website <FiGlobe />
             </a>
-          )}
+          </>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   )
 }
