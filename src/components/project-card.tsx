@@ -71,29 +71,25 @@ export default function ProjectCard({
           <Tags />
         </div>
         <div className="mt-9 flex flex-1 items-end justify-center gap-2 data-[variant='full']:gap-6">
-          <>
-            {hrefGithub && (
-              <a
-                href={hrefGithub}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 rounded-2xl  px-4 py-2  bg-secondary text-primary hover:bg-primary hover:text-secondary"
-              >
-                Source <FiGithub />
-              </a>
-            )}
-          </>
-
-          <>
+          {hrefGithub && (
             <a
-              href={hrefWebsite}
+              href={hrefGithub}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-2xl  py-2 px-4   bg-blue-600/5 text-blue-600 hover:bg-blue-600 hover:text-neutral-50"
+              className="flex items-center gap-2 rounded-2xl  px-4 py-2  bg-secondary text-primary hover:bg-primary hover:text-secondary"
             >
-              Website <FiGlobe />
+              Source <FiGithub />
             </a>
-          </>
+          )}
+
+          <a
+            href={hrefWebsite}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 rounded-2xl  py-2 px-4   bg-blue-600/5 text-blue-600 hover:bg-blue-600 hover:text-neutral-50"
+          >
+            Website <FiGlobe />
+          </a>
         </div>
       </div>
     </div>
