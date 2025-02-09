@@ -72,14 +72,16 @@ export default function ProjectCard({
         </div>
         <div className="mt-9 flex flex-1 items-end justify-center gap-2 data-[variant='full']:gap-6">
           <>
-            <a
-              href={hrefGithub}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 rounded-2xl  px-4 py-2  bg-secondary text-primary hover:bg-primary hover:text-secondary"
-            >
-              Source <FiGithub />
-            </a>
+            {hrefGithub && (
+              <a
+                href={hrefGithub}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 rounded-2xl  px-4 py-2  bg-secondary text-primary hover:bg-primary hover:text-secondary"
+              >
+                Source <FiGithub />
+              </a>
+            )}
           </>
 
           <>
