@@ -1,21 +1,5 @@
 import ProjectCard from '@/components/project-card.tsx'
 
-const languagesLearnedInFirstCourse = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'Node.js',
-  'PostgreSQL',
-  'React',
-]
-const languagesLearnedInSecondCourse = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Tailwind CSS',
-  'Node.js',
-  'PostgreSQL',
-]
 const languagesUsedInFinanceApp = [
   'React',
   'Next.js',
@@ -41,41 +25,34 @@ export default function Description() {
           dans ce domaine.
         </p>
       </div>
-      <div className="space-y-10">
-        <div className="space-y-2 flex flex-col items-center lg:items-start">
-          <h1 className="text-4xl font-bold text-primary ">J'ai appris</h1>
-          <p className="text-tertiary ">
-            + des tonnes de vidéos sur YouTube et d'articles
-          </p>
-        </div>
-
+      <div className="space-y-10 flex flex-col items-center lg:items-start">
+        <h1 className="text-4xl font-bold text-primary"> Les stages réalisé</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
           <ProjectCard
-            src="/firstCourse.png"
-            alt="first course"
-            title="Full-Stack Web Dev"
-            description="La formation complète pour maîtriser les bases du développement web Full Stack. "
-            arrayLanguages={languagesLearnedInFirstCourse}
-            hrefWebsite="https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=KEEPLEARNING"
+            src="/scaleway.png"
+            alt="scaleway stage"
+            title={
+              <>
+                Scaleway | <span className="text-tertiary">2 mois</span>
+              </>
+            }
+            description=" Découverte de l’organisation d’une grande entreprise tech, travail sur des tickets en
+            environnement agile, exploration des produits cloud (instances, Kubernetes, clusters) et collaboration
+             avec les équipes pour résoudre des problèmes techniques."
+            hrefWebsite="https://www.scaleway.com/en/"
           />
           <ProjectCard
-            src="/secondCourse.png"
-            alt="second course "
-            title="Adv. React & Next.js "
-            description="Dans cette formation, nous approfondissons les concepts de React,
-             apprenons à créer des projets avec Next.js et TypeScript,
-            et maîtrisons la gestion d'état avec des stores comme Zustand."
-            arrayLanguages={languagesLearnedInSecondCourse}
-            hrefWebsite="https://www.udemy.com/course/the-ultimate-react-course/?couponCode=KEEPLEARNING"
-          />
-          <ProjectCard
-            src="/thirdCourse.png"
-            alt="third course "
-            title="JavaScript Algorithms and Data Structures Masterclass "
-            description="Formation sur les algorithmes : compréhension de la complexité avec la notation Big O,
-             recherche binaire, optimisation de fonctions, résolution de problèmes avec les patterns courants et
-              la récursion.."
-            hrefWebsite="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
+            src="/taccuinu.png"
+            alt="taccuinu stage"
+            title={
+              <>
+                Taccuinu | <span className="text-tertiary">3 mois</span>
+              </>
+            }
+            description="Développement et intégration de fonctionnalités sur des projets web avec React et Node.js,
+            gestion de tickets de développement, amélioration de l'UX/UI, et collaboration étroite avec l’équipe pour
+            optimiser les performances et la qualité du code."
+            hrefWebsite="https://taccuinu.com/"
           />
         </div>
       </div>
@@ -89,7 +66,7 @@ export default function Description() {
           <ProjectCard
             src="/financeProjet.png"
             alt="finance projet"
-            title="Finance App"
+            title="Finance App |"
             description="Analysez vos dépenses et revenus grâce à Finance App, qui vous
             permet de gérer vos transactions, les exporter et importer des
             fichiers CSV."
@@ -100,7 +77,7 @@ export default function Description() {
           <ProjectCard
             src="/portfolio.png"
             alt="portfolio projet"
-            title="Portfolio"
+            title="Portfolio |"
             description="Mon site personnel, ce site !"
             arrayLanguages={languagesUsedInPortfolio}
             hrefGithub="https://github.com/Bassammohammad/Portfolio"
@@ -108,29 +85,7 @@ export default function Description() {
           />
         </div>
       </div>
-      <div className="space-y-10 flex flex-col items-center lg:items-start">
-        <h1 className="text-4xl font-bold text-primary"> Les stages réalisé</h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
-          <ProjectCard
-            src="/scaleway.png"
-            alt="scaleway stage"
-            title="Scaleway"
-            description=" Découverte de l’organisation d’une grande entreprise tech, travail sur des tickets en
-            environnement agile, exploration des produits cloud (instances, Kubernetes, clusters) et collaboration
-             avec les équipes pour résoudre des problèmes techniques."
-            hrefWebsite="https://www.scaleway.com/en/"
-          />
-          <ProjectCard
-            src="/taccuinu.png"
-            alt="taccuinu stage"
-            title="Taccuinu"
-            description="Développement et intégration de fonctionnalités sur des projets web avec React et Node.js,
-            gestion de tickets de développement, amélioration de l'UX/UI, et collaboration étroite avec l’équipe pour
-            optimiser les performances et la qualité du code."
-            hrefWebsite="https://taccuinu.com/"
-          />
-        </div>
-      </div>
+
       <div className="space-y-4 flex flex-col items-center lg:items-start">
         <h1 className="text-4xl font-bold text-primary ">
           Ce que j'aimerais réaliser dans ma carrière

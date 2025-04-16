@@ -1,12 +1,11 @@
 import Image from '@/components/image.tsx'
 import { Badge } from '@/components/ui/badge.tsx'
 import { FiGithub, FiGlobe } from 'react-icons/fi'
-import { Separator } from '@/components/ui/separator.tsx'
 
 type ProjectCardProps = {
   src: string
   alt: string
-  title: string
+  title: React.ReactNode
   description: string
   arrayLanguages?: string[]
   hrefGithub?: string
@@ -62,7 +61,6 @@ export default function ProjectCard({
         <div>
           <div className="flex items-center gap-x-2">
             <h1 className="text-primary">{title}</h1>
-            <Separator orientation="vertical" />
             <TechIcons />
           </div>
           <p className="text-justify  md:text-left py-4  text-tertiary">
