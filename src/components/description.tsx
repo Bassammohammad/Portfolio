@@ -43,9 +43,7 @@ export default function Description() {
       </div>
       <div className="space-y-10">
         <div className="space-y-2 flex flex-col items-center lg:items-start">
-          <h1 className="text-4xl font-bold text-primary ">
-            Ce que j'ai appris
-          </h1>
+          <h1 className="text-4xl font-bold text-primary ">J'ai appris</h1>
           <p className="text-tertiary ">
             + des tonnes de vidéos sur YouTube et d'articles
           </p>
@@ -70,13 +68,22 @@ export default function Description() {
             arrayLanguages={languagesLearnedInSecondCourse}
             hrefWebsite="https://www.udemy.com/course/the-ultimate-react-course/?couponCode=KEEPLEARNING"
           />
+          <ProjectCard
+            src="/thirdCourse.png"
+            alt="third course "
+            title="JavaScript Algorithms and Data Structures Masterclass "
+            description="Formation sur les algorithmes : compréhension de la complexité avec la notation Big O,
+             recherche binaire, optimisation de fonctions, résolution de problèmes avec les patterns courants et
+              la récursion.."
+            hrefWebsite="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
+          />
         </div>
       </div>
 
       <div className="space-y-10 flex flex-col items-center lg:items-start">
         <h1 className="text-4xl font-bold text-primary">
           {' '}
-          Ce que j'ai réalisé
+          Les projets réalisé
         </h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
           <ProjectCard
@@ -98,6 +105,29 @@ export default function Description() {
             arrayLanguages={languagesUsedInPortfolio}
             hrefGithub="https://github.com/Bassammohammad/Portfolio"
             hrefWebsite="https://portfolio-rho-umber-73.vercel.app/"
+          />
+        </div>
+      </div>
+      <div className="space-y-10 flex flex-col items-center lg:items-start">
+        <h1 className="text-4xl font-bold text-primary"> Les stages réalisé</h1>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
+          <ProjectCard
+            src="/scaleway.png"
+            alt="scaleway stage"
+            title="Scaleway"
+            description=" Découverte de l’organisation d’une grande entreprise tech, travail sur des tickets en
+            environnement agile, exploration des produits cloud (instances, Kubernetes, clusters) et collaboration
+             avec les équipes pour résoudre des problèmes techniques."
+            hrefWebsite="https://www.scaleway.com/en/"
+          />
+          <ProjectCard
+            src="/taccuinu.png"
+            alt="taccuinu stage"
+            title="Taccuinu"
+            description="Développement et intégration de fonctionnalités sur des projets web avec React et Node.js,
+            gestion de tickets de développement, amélioration de l'UX/UI, et collaboration étroite avec l’équipe pour
+            optimiser les performances et la qualité du code."
+            hrefWebsite="https://taccuinu.com/"
           />
         </div>
       </div>

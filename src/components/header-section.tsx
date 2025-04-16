@@ -27,6 +27,7 @@ export default function HeaderSection() {
               words={[
                 'Développeur en perpétuelle évolution',
                 'Autodidacte et curieux',
+                '2 ans d’apprentissage continu',
                 'Passionné par le code',
                 "Toujours en quête d'amélioration",
               ]}
